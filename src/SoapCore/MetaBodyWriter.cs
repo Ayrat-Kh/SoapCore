@@ -84,14 +84,6 @@ namespace SoapCore
 			writer.WriteAttributeString("elementFormDefault", "qualified");
 			writer.WriteAttributeString("targetNamespace", TargetNameSpace);
 
-			writer.WriteStartElement("xs:import");
-			writer.WriteAttributeString("namespace", "http://schemas.microsoft.com/2003/10/Serialization/Arrays");
-			writer.WriteEndElement();
-
-			writer.WriteStartElement("xs:import");
-			writer.WriteAttributeString("namespace", "http://schemas.datacontract.org/2004/07/System");
-			writer.WriteEndElement();
-
 			foreach (var operation in _service.Operations)
 			{
 				// input parameters of operation
